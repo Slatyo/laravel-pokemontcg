@@ -69,3 +69,6 @@ modules.xml
 # PHPUnit
 /app/phpunit.xml
 /phpunit.xml
+
+# PHPStan
+phpstan.neon

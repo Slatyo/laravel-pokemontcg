@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="3" assertions="7" errors="1" warnings="0" failures="0" skipped="0" time="2.372382">
-    <testsuite name="Laravel Pokemontcg Test Suite" tests="3" assertions="7" errors="1" warnings="0" failures="0" skipped="0" time="2.372382">
-      <testsuite name="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" tests="2" assertions="6" errors="1" warnings="0" failures="0" skipped="0" time="2.367971">
-        <testcase name="testCard" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="27" assertions="0" time="2.360463">
-          <error type="Illuminate\Http\Client\ConnectionException">Slaty\LaravelPokemontcg\Tests\PokemontcgTest::testCard
-Illuminate\Http\Client\ConnectionException: cURL error 6: Could not resolve host: cards (see https://curl.haxx.se/libcurl/c/libcurl-errors.html) for cards/basep-11
+  <testsuite name="" tests="3" assertions="8" errors="0" warnings="0" failures="1" skipped="0" time="0.351157">
+    <testsuite name="Laravel Pokemontcg Test Suite" tests="3" assertions="8" errors="0" warnings="0" failures="1" skipped="0" time="0.351157">
+      <testsuite name="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" tests="2" assertions="7" errors="0" warnings="0" failures="1" skipped="0" time="0.346901">
+        <testcase name="testCardEndpoints" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="27" assertions="1" time="0.339684">
+          <failure type="PHPUnit\Framework\ExpectationFailedException">Slaty\LaravelPokemontcg\Tests\PokemontcgTest::testCardEndpoints
+An expected request was not recorded.
+  Failed asserting that false is true.
 
-C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\vendor\laravel\framework\src\Illuminate\Http\Client\PendingRequest.php:691
-C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\vendor\laravel\framework\src\Illuminate\Support\helpers.php:234
-C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\vendor\laravel\framework\src\Illuminate\Http\Client\PendingRequest.php:693
-C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\vendor\laravel\framework\src\Illuminate\Http\Client\PendingRequest.php:548
-C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\src\Models\Card.php:26
-C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php:30</error>
+C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\vendor\laravel\framework\src\Illuminate\Http\Client\Factory.php:255
+C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\vendor\laravel\framework\src\Illuminate\Support\Facades\Facade.php:261
+C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php:38</failure>
         </testcase>
-        <testcase name="testStaticMethods" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="17" assertions="6" time="0.007508"/>
+        <testcase name="testStaticMethods" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="17" assertions="6" time="0.007217"/>
       </testsuite>
-      <testsuite name="Slaty\LaravelPokemontcg\Tests\ExampleTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\ExampleTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.004411">
-        <testcase name="test_example" class="Slaty\LaravelPokemontcg\Tests\ExampleTest" classname="Slaty.LaravelPokemontcg.Tests.ExampleTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\ExampleTest.php" line="12" assertions="1" time="0.004411"/>
+      <testsuite name="Slaty\LaravelPokemontcg\Tests\ExampleTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\ExampleTest.php" tests="1" assertions="1" errors="0" warnings="0" failures="0" skipped="0" time="0.004256">
+        <testcase name="test_example" class="Slaty\LaravelPokemontcg\Tests\ExampleTest" classname="Slaty.LaravelPokemontcg.Tests.ExampleTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\ExampleTest.php" line="12" assertions="1" time="0.004256"/>
       </testsuite>
     </testsuite>
   </testsuite>

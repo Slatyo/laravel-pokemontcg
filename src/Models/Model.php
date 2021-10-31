@@ -21,11 +21,10 @@ abstract class Model
     {
         $this->client = Http::withOptions(
             [
-                'base_uri' => config('pokemontcg.api_url'),
+                'base_uri' => config('pokemontcg.api_url', 'https://api.pokemontcg.io/v2'),
             ]
         )->withHeaders(
             [
-                'Accept' => 'application/json',
                 'X-Api-Key' => config('pokemontcg.secret'),
             ]
         );

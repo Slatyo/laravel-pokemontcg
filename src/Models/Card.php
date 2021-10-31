@@ -21,9 +21,12 @@ class Card extends Model
      */
     public function find(string $pokemonTcgId): mixed
     {
-        $endpoint = self::ENDPOINT.'/'.$pokemonTcgId;
-
-        return $this->resolveResponse($this->client->get($endpoint), $endpoint);
+        return $this->resolveResponse(
+            $this->client->get(self::ENDPOINT, [
+                'id' => $pokemonTcgId,
+            ]),
+            self::ENDPOINT.$pokemonTcgId
+        );
     }
 
     /**
@@ -51,7 +54,7 @@ class Card extends Model
                 'pageSize' => $pageSize,
                 'orderBy' => $orderBy,
             ]),
-            self::ENDPOINT
+            self::ENDPOINT.$query
         );
     }
 
@@ -73,7 +76,7 @@ class Card extends Model
             $this->client->get(self::ENDPOINT, [
                 'q' => $exclamation.'name:'.$pokemon,
             ]),
-            self::ENDPOINT
+            self::ENDPOINT.$pokemon
         );
     }
 
@@ -92,7 +95,7 @@ class Card extends Model
             $this->client->get(self::ENDPOINT, [
                 'q' => 'name:'.$supertype.$type,
             ]),
-            self::ENDPOINT
+            self::ENDPOINT.$supertype.$type
         );
     }
 
@@ -108,7 +111,7 @@ class Card extends Model
             $this->client->get(self::ENDPOINT, [
                 'q' => 'nationalPokedexNumbers:['.$from.' TO '.$to.']',
             ]),
-            self::ENDPOINT
+            self::ENDPOINT.'nationalPokedex'.$from.$to
         );
     }
 
@@ -124,7 +127,7 @@ class Card extends Model
             $this->client->get(self::ENDPOINT, [
                 'q' => 'hp:['.$from.' TO '.$to.']',
             ]),
-            self::ENDPOINT
+            self::ENDPOINT.'hp'.$from.$to
         );
     }
 }

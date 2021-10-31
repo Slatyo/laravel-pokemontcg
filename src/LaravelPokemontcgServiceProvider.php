@@ -9,7 +9,7 @@ class LaravelPokemontcgServiceProvider extends ServiceProvider
     /**
      * Bootstrap the application services.
      */
-    public function boot()
+    public function boot(): void
     {
         /*
          * Optional methods to load your package assets
@@ -53,7 +53,7 @@ class LaravelPokemontcgServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/pokemontcg.php', 'laravel-pokemontcg');
 
         // Register the main class to use with the facade
-        $this->app->singleton('laravel-pokemontcg', function () {
+        $this->app->singleton('pokemontcg', function () {
             return new Pokemontcg;
         });
     }

@@ -14,7 +14,7 @@ use Slaty\LaravelPokemontcg\Pokemontcg;
 
 class PokemontcgTest extends TestCase
 {
-    public function testStaticMethods()
+    public function testStaticMethods(): void
     {
         $this->assertEquals(new Card(), Pokemontcg::cards());
         $this->assertEquals(new Set(), Pokemontcg::sets());
@@ -24,14 +24,13 @@ class PokemontcgTest extends TestCase
         $this->assertEquals(new Type(), Pokemontcg::types());
     }
 
-    public function testCard()
+    public function testCardEndpoints(): void
     {
         $cards = Pokemontcg::cards();
-        $cards->find('basep-11');
-
+        $cards->hp(1, 50);
 
         Http::assertSent(function (Request $request) {
-            return $request->url() === 'https://api.pokemontcg.io/v2' . Card::ENDPOINT . '/basep-11' && $request->method() === 'GET';
+            return $request->url() === 'https://api.pokemontcg.io/cards?q=hp%3A%5B1%20TO%2050%5D' && $request->method() === 'GET';
         });
     }
 }
