@@ -4,7 +4,7 @@ This package is currently under construction.
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/slaty/laravel-pokemontcg.svg?style=flat-square)](https://packagist.org/packages/slaty/laravel-pokemontcg)
 [![Total Downloads](https://img.shields.io/packagist/dt/slaty/laravel-pokemontcg.svg?style=flat-square)](https://packagist.org/packages/slaty/laravel-pokemontcg)
-![GitHub Actions](https://github.com/slaty/laravel-pokemontcg/actions/workflows/main.yml/badge.svg)
+[![run-tests](https://github.com/Slatyo/laravel-pokemontcg/actions/workflows/main.yml/badge.svg)](https://github.com/Slatyo/laravel-pokemontcg/actions/workflows/main.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/slatyo/laravel-pokemontcg/badge)](https://www.codefactor.io/repository/github/slatyo/laravel-pokemontcg)
 
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
