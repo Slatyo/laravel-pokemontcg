@@ -27,7 +27,7 @@ class PokemontcgTest extends TestCase
     public function testCardEndpoints(): void
     {
         $cards = Pokemontcg::cards();
-        $cards->hp(1, 50);
+        $cards->hp('1', '50');
 
         Http::assertSent(function (Request $request) {
             return $request->url() === 'https://api.pokemontcg.io/cards?q=hp%3A%5B1%20TO%2050%5D' && $request->method() === 'GET';
