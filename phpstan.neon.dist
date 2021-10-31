@@ -13,4 +13,3 @@ parameters:
   #   - ./*/*/FileToBeExcluded.php
   checkMissingIterableValueType: false
   reportUnmatchedIgnoredErrors: false
-  

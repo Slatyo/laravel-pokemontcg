@@ -86,6 +86,7 @@ class Card extends Model
         if (strlen($type)) {
             $type = ' -types:'.$type;
         }
+
         return $this->resolveResponse(
             $this->client->get($this->getEndpoint(), [
                 'q' => 'name:'.$supertype.$type,

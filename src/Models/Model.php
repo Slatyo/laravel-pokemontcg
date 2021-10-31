@@ -55,11 +55,17 @@ abstract class Model
         });
     }
 
+    /**
+     *
+     */
     protected function setEndpoint(): void
     {
         $this->endpoint = Str::kebab(Str::plural(class_basename(get_class($this))));
     }
 
+    /**
+     * @return string
+     */
     protected function getEndpoint(): string
     {
         return $this->endpoint;
