@@ -1,6 +1,6 @@
 This package is currently under construction. 
 
-# Very short description of the package
+# Laravel Pokemontcg
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/Slatyo/laravel-pokemontcg.svg?style=flat-square)](https://packagist.org/packages/slatyo/laravel-pokemontcg)
 [![Total Downloads](https://img.shields.io/packagist/dt/Slatyo/laravel-pokemontcg.svg?style=flat-square)](https://packagist.org/packages/Slatyo/laravel-pokemontcg)
