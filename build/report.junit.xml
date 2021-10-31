@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="" tests="8" assertions="26" errors="0" warnings="0" failures="0" skipped="0" time="0.131851">
-    <testsuite name="Laravel Pokemontcg Test Suite" tests="8" assertions="26" errors="0" warnings="0" failures="0" skipped="0" time="0.131851">
-      <testsuite name="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" tests="7" assertions="20" errors="0" warnings="0" failures="0" skipped="0" time="0.127770">
-        <testcase name="testRarityEndpoints" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="140" assertions="1" time="0.097390"/>
-        <testcase name="testSubtypeEndpoints" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="116" assertions="1" time="0.005606"/>
-        <testcase name="testSupertypeEndpoints" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="104" assertions="1" time="0.004353"/>
-        <testcase name="testCardEndpoints" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="27" assertions="8" time="0.006121"/>
-        <testcase name="testSetEndpoints" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="85" assertions="2" time="0.004583"/>
-        <testcase name="testStaticMethods" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="17" assertions="6" time="0.005603"/>
-        <testcase name="testTypeEndpoints" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="128" assertions="1" time="0.004113"/>
+  <testsuite name="" tests="8" assertions="26" errors="0" warnings="0" failures="0" skipped="0" time="0.246905">
+    <testsuite name="Laravel Pokemontcg Test Suite" tests="8" assertions="26" errors="0" warnings="0" failures="0" skipped="0" time="0.246905">
+      <testsuite name="Slaty\LaravelPokemontcg\Tests\ModelTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\ModelTest.php" tests="1" assertions="6" errors="0" warnings="0" failures="0" skipped="0" time="0.112549">
+        <testcase name="testEndpointMethods" class="Slaty\LaravelPokemontcg\Tests\ModelTest" classname="Slaty.LaravelPokemontcg.Tests.ModelTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\ModelTest.php" line="14" assertions="6" time="0.112549"/>
       </testsuite>
-      <testsuite name="Slaty\LaravelPokemontcg\Tests\ModelTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\ModelTest.php" tests="1" assertions="6" errors="0" warnings="0" failures="0" skipped="0" time="0.004081">
-        <testcase name="testEndpointMethods" class="Slaty\LaravelPokemontcg\Tests\ModelTest" classname="Slaty.LaravelPokemontcg.Tests.ModelTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\ModelTest.php" line="14" assertions="6" time="0.004081"/>
+      <testsuite name="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" tests="7" assertions="20" errors="0" warnings="0" failures="0" skipped="0" time="0.134356">
+        <testcase name="testSetEndpoints" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="85" assertions="2" time="0.030610"/>
+        <testcase name="testCardEndpoints" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="27" assertions="8" time="0.021122"/>
+        <testcase name="testTypeEndpoints" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="128" assertions="1" time="0.015700"/>
+        <testcase name="testRarityEndpoints" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="140" assertions="1" time="0.015495"/>
+        <testcase name="testSupertypeEndpoints" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="104" assertions="1" time="0.015435"/>
+        <testcase name="testStaticMethods" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="17" assertions="6" time="0.020556"/>
+        <testcase name="testSubtypeEndpoints" class="Slaty\LaravelPokemontcg\Tests\PokemontcgTest" classname="Slaty.LaravelPokemontcg.Tests.PokemontcgTest" file="C:\Users\Slaty\Documents\GitHub\laravel-pokemontcg\tests\PokemontcgTest.php" line="116" assertions="1" time="0.015438"/>
       </testsuite>
     </testsuite>
   </testsuite>
