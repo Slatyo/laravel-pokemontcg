@@ -1,6 +1,6 @@
 <?php
 
-namespace Slaty\LaravelPokemontcg\Models;
+namespace Slatyo\LaravelPokemontcg\Models;
 
 class Set extends Model
 {

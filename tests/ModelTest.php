@@ -1,10 +1,10 @@
 <?php
 
-namespace Slaty\LaravelPokemontcg\Tests;
+namespace Slatyo\LaravelPokemontcg\Tests;
 
 use ReflectionException;
-use Slaty\LaravelPokemontcg\Models\Card;
-use Slaty\LaravelPokemontcg\Pokemontcg;
+use Slatyo\LaravelPokemontcg\Models\Card;
+use Slatyo\LaravelPokemontcg\Pokemontcg;
 
 class ModelTest extends TestCase
 {

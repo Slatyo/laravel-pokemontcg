@@ -1,13 +1,13 @@
 <?php
 
-namespace Slaty\LaravelPokemontcg;
+namespace Slatyo\LaravelPokemontcg;
 
-use Slaty\LaravelPokemontcg\Models\Card;
-use Slaty\LaravelPokemontcg\Models\Rarity;
-use Slaty\LaravelPokemontcg\Models\Set;
-use Slaty\LaravelPokemontcg\Models\Subtype;
-use Slaty\LaravelPokemontcg\Models\Supertype;
-use Slaty\LaravelPokemontcg\Models\Type;
+use Slatyo\LaravelPokemontcg\Models\Card;
+use Slatyo\LaravelPokemontcg\Models\Rarity;
+use Slatyo\LaravelPokemontcg\Models\Set;
+use Slatyo\LaravelPokemontcg\Models\Subtype;
+use Slatyo\LaravelPokemontcg\Models\Supertype;
+use Slatyo\LaravelPokemontcg\Models\Type;
 
 class Pokemontcg
 {

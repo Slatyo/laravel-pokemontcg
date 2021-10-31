@@ -1,6 +1,6 @@
 <?php
 
-namespace Slaty\LaravelPokemontcg;
+namespace Slatyo\LaravelPokemontcg;
 
 use Illuminate\Support\ServiceProvider;
 

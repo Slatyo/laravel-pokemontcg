@@ -1,11 +1,11 @@
 {
-    "name": "slaty/laravel-pokemontcg",
+    "name": "slatyo/laravel-pokemontcg",
     "description": "A wrapper for the pokemontcg.io API",
     "keywords": [
-        "slaty",
+        "slatyo",
         "laravel-pokemontcg"
     ],
-    "homepage": "https://github.com/slaty/laravel-pokemontcg",
+    "homepage": "https://github.com/slatyo/laravel-pokemontcg",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -28,12 +28,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Slaty\\LaravelPokemontcg\\": "src"
+            "Slatyo\\LaravelPokemontcg\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Slaty\\LaravelPokemontcg\\Tests\\": "tests"
+            "Slatyo\\LaravelPokemontcg\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -55,10 +55,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Slaty\\LaravelPokemontcg\\LaravelPokemontcgServiceProvider"
+                "Slatyo\\LaravelPokemontcg\\LaravelPokemontcgServiceProvider"
             ],
             "aliases": {
-                "LaravelPokemontcg": "Slaty\\LaravelPokemontcg\\LaravelPokemontcgFacade"
+                "LaravelPokemontcg": "Slatyo\\LaravelPokemontcg\\LaravelPokemontcgFacade"
             }
         }
     }

@@ -1,11 +1,11 @@
 <?php
 
-namespace Slaty\LaravelPokemontcg;
+namespace Slatyo\LaravelPokemontcg;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @see \Slaty\LaravelPokemontcg\Skeleton\SkeletonClass
+ * @see \Slatyo\LaravelPokemontcg\Skeleton\SkeletonClass
  */
 class LaravelPokemontcgFacade extends Facade
 {

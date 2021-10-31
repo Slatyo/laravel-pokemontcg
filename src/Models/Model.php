@@ -1,6 +1,6 @@
 <?php
 
-namespace Slaty\LaravelPokemontcg\Models;
+namespace Slatyo\LaravelPokemontcg\Models;
 
 use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
