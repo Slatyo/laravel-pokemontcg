@@ -10,18 +10,13 @@ class Set extends Model
     public const MAXIMUM_PAGE_SIZE = 250;
 
     /**
-     * @var string
-     */
-    public const ENDPOINT = '/sets';
-
-    /**
      * @param  string  $set
      *
      * @return mixed
      */
     public function find(string $set): mixed
     {
-        $endpoint = self::ENDPOINT.'/'.$set;
+        $endpoint = $this->getEndpoint().'/'.$set;
 
         return $this->resolveResponse($this->client->get($endpoint), $endpoint);
     }
@@ -45,13 +40,13 @@ class Set extends Model
         }
 
         return $this->resolveResponse(
-            $this->client->get(self::ENDPOINT, [
+            $this->client->get($this->getEndpoint(), [
                 'q' => $query,
                 'page' => $page,
                 'pageSize' => $pageSize,
                 'orderBy' => $orderBy,
             ]),
-            self::ENDPOINT
+            $this->getEndpoint()
         );
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Http\Client\Response;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Str;
 
 abstract class Model
 {
@@ -13,6 +14,11 @@ abstract class Model
      * @var PendingRequest
      */
     protected PendingRequest $client;
+
+    /**
+     * @var string $endpoint
+     */
+    protected string $endpoint;
 
     /**
      *
@@ -28,6 +34,8 @@ abstract class Model
                 'X-Api-Key' => config('pokemontcg.secret'),
             ]
         );
+
+        $this->setEndpoint();
     }
 
     /**
@@ -45,5 +53,15 @@ abstract class Model
         return Cache::remember($cacheKey, 3600, function () use ($response) {
             return $response->json();
         });
+    }
+
+    protected function setEndpoint(): void
+    {
+        $this->endpoint = Str::kebab(Str::plural(class_basename(get_class($this))));
+    }
+
+    protected function getEndpoint(): string
+    {
+        return $this->endpoint;
     }
 }

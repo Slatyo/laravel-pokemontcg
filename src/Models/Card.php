@@ -10,11 +10,6 @@ class Card extends Model
     public const MAXIMUM_PAGE_SIZE = 250;
 
     /**
-     * @var string
-     */
-    public const ENDPOINT = '/cards';
-
-    /**
      * @param  string  $pokemonTcgId
      *
      * @return mixed
@@ -22,10 +17,10 @@ class Card extends Model
     public function find(string $pokemonTcgId): mixed
     {
         return $this->resolveResponse(
-            $this->client->get(self::ENDPOINT, [
+            $this->client->get($this->getEndpoint(), [
                 'id' => $pokemonTcgId,
             ]),
-            self::ENDPOINT.$pokemonTcgId
+            $this->getEndpoint().$pokemonTcgId
         );
     }
 
@@ -48,13 +43,13 @@ class Card extends Model
         }
 
         return $this->resolveResponse(
-            $this->client->get(self::ENDPOINT, [
+            $this->client->get($this->getEndpoint(), [
                 'q' => $query,
                 'page' => $page,
                 'pageSize' => $pageSize,
                 'orderBy' => $orderBy,
             ]),
-            self::ENDPOINT.$query
+            $this->getEndpoint().$query
         );
     }
 
@@ -73,10 +68,10 @@ class Card extends Model
         }
 
         return $this->resolveResponse(
-            $this->client->get(self::ENDPOINT, [
+            $this->client->get($this->getEndpoint(), [
                 'q' => $exclamation.'name:'.$pokemon,
             ]),
-            self::ENDPOINT.$pokemon
+            $this->getEndpoint().$pokemon
         );
     }
 
@@ -92,10 +87,10 @@ class Card extends Model
             $type = ' -types:'.$type;
         }
         return $this->resolveResponse(
-            $this->client->get(self::ENDPOINT, [
+            $this->client->get($this->getEndpoint(), [
                 'q' => 'name:'.$supertype.$type,
             ]),
-            self::ENDPOINT.$supertype.$type
+            $this->getEndpoint().$supertype.$type
         );
     }
 
@@ -108,10 +103,10 @@ class Card extends Model
     public function pokedex(string $from, string $to): mixed
     {
         return $this->resolveResponse(
-            $this->client->get(self::ENDPOINT, [
+            $this->client->get($this->getEndpoint(), [
                 'q' => 'nationalPokedexNumbers:['.$from.' TO '.$to.']',
             ]),
-            self::ENDPOINT.'nationalPokedex'.$from.$to
+            $this->getEndpoint().'nationalPokedex'.$from.$to
         );
     }
 
@@ -124,10 +119,10 @@ class Card extends Model
     public function hp(string $from, string $to): mixed
     {
         return $this->resolveResponse(
-            $this->client->get(self::ENDPOINT, [
+            $this->client->get($this->getEndpoint(), [
                 'q' => 'hp:['.$from.' TO '.$to.']',
             ]),
-            self::ENDPOINT.'hp'.$from.$to
+            $this->getEndpoint().'hp'.$from.$to
         );
     }
 }
