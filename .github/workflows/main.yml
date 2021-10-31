@@ -45,3 +45,8 @@ jobs:
               run: |
                 vendor/bin/phpunit
                 composer stan
+                vendor/bin/phpunit --coverage-clover coverage.xml
+            - name: Upload
+              uses: codecov/codecov-action@v1
+              with:
+                files: ./coverage.xml
