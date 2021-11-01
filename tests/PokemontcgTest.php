@@ -80,6 +80,20 @@ class PokemontcgTest extends TestCase
             return $request->url() === 'https://api.pokemontcg.io/cards?q=%21name%3Acharizard%20subtypes%3Amega%20-types%3Afire&page=1&pageSize=250&orderBy='
                 && $request->method() === 'GET';
         });
+
+        $cards->search('!name:charizard subtypes:mega -types:fire', 1, 'max');
+
+        Http::assertSent(function (Request $request) {
+            return $request->url() === 'https://api.pokemontcg.io/cards?q=%21name%3Acharizard%20subtypes%3Amega%20-types%3Afire&page=1&pageSize=250&orderBy='
+                && $request->method() === 'GET';
+        });
+
+        $cards->search('!name:charizard subtypes:mega -types:fire', 1, 237);
+
+        Http::assertSent(function (Request $request) {
+            return $request->url() === 'https://api.pokemontcg.io/cards?q=%21name%3Acharizard%20subtypes%3Amega%20-types%3Afire&page=1&pageSize=237&orderBy='
+                && $request->method() === 'GET';
+        });
     }
 
     public function testSetEndpoints(): void

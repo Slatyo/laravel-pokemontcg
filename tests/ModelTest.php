@@ -2,8 +2,9 @@
 
 namespace Slatyo\LaravelPokemontcg\Tests;
 
+use Illuminate\Http\Client\Response;
+use Mockery;
 use ReflectionException;
-use Slatyo\LaravelPokemontcg\Models\Card;
 use Slatyo\LaravelPokemontcg\Pokemontcg;
 
 class ModelTest extends TestCase
@@ -48,5 +49,21 @@ class ModelTest extends TestCase
 
         $endpoint = $this->invokeMethod($rarities, 'getEndpoint');
         $this->assertEquals('rarities', $endpoint);
+    }
+
+    /**
+     * @throws ReflectionException
+     */
+    public function testResolvingResponse(): void
+    {
+        $cards = Pokemontcg::cards();
+        $responseMock = Mockery::mock(Response::class);
+
+        $responseMock->shouldReceive('json');
+
+        $this->invokeMethod($cards, 'resolveResponse', [
+            $responseMock,
+            false
+        ]);
     }
 }
