@@ -1,0 +1,66 @@
+{
+    "name": "slatyo/laravel-pokemontcg",
+    "description": "A wrapper for the pokemontcg.io API",
+    "keywords": [
+        "slatyo",
+        "laravel-pokemontcg"
+    ],
+    "homepage": "https://github.com/slatyo/laravel-pokemontcg",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Daniel Henze",
+            "email": "daniel.henze@outlook.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.4",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.4",
+        "nunomaduro/collision": "^5.10",
+        "nunomaduro/larastan": "^0.7.15",
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.5",
+        "roave/security-advisories": "dev-latest"
+    },
+    "autoload": {
+        "psr-4": {
+            "Slatyo\\LaravelPokemontcg\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Slatyo\\LaravelPokemontcg\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/testbench package:test",
+        "stan": "vendor/bin/phpstan analyse",
+        "stan-2g": "vendor/bin/phpstan analyse --memory-limit=2G",
+        "test:coverage": [
+            "@putenv XDEBUG_MODE=coverage",
+            "phpunit --color=always --coverage-clover=\"build/clover.xml\""
+        ],
+        "test:coverage-html": [
+            "@putenv XDEBUG_MODE=coverage",
+            "phpunit --color=always --coverage-html=\"build\""
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Slatyo\\LaravelPokemontcg\\LaravelPokemontcgServiceProvider"
+            ],
+            "aliases": {
+                "LaravelPokemontcg": "Slatyo\\LaravelPokemontcg\\LaravelPokemontcgFacade"
+            }
+        }
+    }
+}
