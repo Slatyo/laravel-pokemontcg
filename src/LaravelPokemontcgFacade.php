@@ -4,9 +4,6 @@ namespace Slatyo\LaravelPokemontcg;
 
 use Illuminate\Support\Facades\Facade;
 
-/**
- * @see \Slatyo\LaravelPokemontcg\Skeleton\SkeletonClass
- */
 class LaravelPokemontcgFacade extends Facade
 {
     /**
@@ -14,8 +11,8 @@ class LaravelPokemontcgFacade extends Facade
      *
      * @return string
      */
-    protected static function getFacadeAccessor()
+    protected static function getFacadeAccessor(): string
     {
-        return 'laravel-pokemontcg';
+        return 'pokemontcg';
     }
 }
