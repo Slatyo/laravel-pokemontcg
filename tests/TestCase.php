@@ -2,9 +2,11 @@
 
 namespace Slatyo\LaravelPokemontcg\Tests;
 
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Http;
 use Orchestra\Testbench\TestCase as Orchestra;
 use ReflectionException;
+use Slatyo\LaravelPokemontcg\LaravelPokemontcgServiceProvider;
 
 class TestCase extends Orchestra
 {
@@ -34,5 +36,17 @@ class TestCase extends Orchestra
         $method->setAccessible(true);
 
         return $method->invokeArgs($object, $parameters);
+    }
+
+    /**
+     * @param  Application  $app
+     *
+     * @return string[]
+     */
+    protected function getPackageProviders($app): array
+    {
+        return [
+            LaravelPokemontcgServiceProvider::class,
+        ];
     }
 }
