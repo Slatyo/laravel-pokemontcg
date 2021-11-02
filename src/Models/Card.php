@@ -83,7 +83,7 @@ class Card extends Model
      */
     public function supertype(string $supertype, string $type = ''): mixed
     {
-        if (strlen($type)) {
+        if ($type !== '') {
             $type = ' -types:'.$type;
         }
 
