@@ -76,6 +76,7 @@ $cards->hp($from, $to);
 use \Slatyo\LaravelPokemontcg\Facades\Card;
 
 Card::hp($from, $to);
+Card::whereHp($from, $to); // alias
 ```
 
 ###### Search by name
@@ -88,6 +89,7 @@ $cards->name('Charizard');
 use \Slatyo\LaravelPokemontcg\Facades\Card;
 
 Card::name('Charizard');
+Card::whereName('Charizard'); // alias
 ```
 
 ###### Search Pokémon by Pokédex entries ($from, $to)
@@ -102,6 +104,7 @@ $cards->pokedex($from, $to);
 use \Slatyo\LaravelPokemontcg\Facades\Card;
 
 Card::pokedex($from, $to);
+Card::wherePokedex($from, $to); // alias
 ```
 
 ###### Search by supertypes
@@ -116,6 +119,8 @@ use \Slatyo\LaravelPokemontcg\Facades\Card;
 
 Card::supertype('mega');
 Card::supertype('mega', 'water');
+Card::whereSupertype('mega'); // alias
+Card::whereSupertype('mega', 'water'); // alias
 ```
 
 ###### Search query
