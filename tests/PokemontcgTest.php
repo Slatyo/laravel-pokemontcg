@@ -272,6 +272,13 @@ class PokemontcgTest extends TestCase
                 && $request->method() === 'GET';
         });
 
+        CardFacade::whereHp('2', '51');
+
+        Http::assertSent(function (Request $request) {
+            return $request->url() === 'https://api.pokemontcg.io/v2/cards?q=hp%3A%5B2%20TO%2051%5D'
+                && $request->method() === 'GET';
+        });
+
         CardFacade::find('test-11');
 
         Http::assertSent(function (Request $request) {
@@ -286,10 +293,24 @@ class PokemontcgTest extends TestCase
                 && $request->method() === 'GET';
         });
 
+        CardFacade::whereName('pikatchu', false);
+
+        Http::assertSent(function (Request $request) {
+            return $request->url() === 'https://api.pokemontcg.io/v2/cards?q=name%3Apikatchu'
+                && $request->method() === 'GET';
+        });
+
         CardFacade::name('charizard', true);
 
         Http::assertSent(function (Request $request) {
             return $request->url() === 'https://api.pokemontcg.io/v2/cards?q=%21name%3Acharizard'
+                && $request->method() === 'GET';
+        });
+
+        CardFacade::whereName('charizard', true);
+
+        Http::assertSent(function (Request $request) {
+            return $request->url() === 'https://api.pokemontcg.io/v2/cards?q=%21name%3Apikatchu'
                 && $request->method() === 'GET';
         });
 
@@ -300,16 +321,35 @@ class PokemontcgTest extends TestCase
                 && $request->method() === 'GET';
         });
 
+        CardFacade::wherePokedex('2', '51');
+
+        Http::assertSent(function (Request $request) {
+            return $request->url() === 'https://api.pokemontcg.io/v2/cards?q=nationalPokedexNumbers%3A%5B2%20TO%2051%5D'
+                && $request->method() === 'GET';
+        });
+
         CardFacade::supertype('mega');
 
         Http::assertSent(function (Request $request) {
             return $request->url() === 'https://api.pokemontcg.io/v2/cards?q=name%3Amega' && $request->method() === 'GET';
         });
 
+        CardFacade::whereSupertype('ultra');
+
+        Http::assertSent(function (Request $request) {
+            return $request->url() === 'https://api.pokemontcg.io/v2/cards?q=name%3Aultra' && $request->method() === 'GET';
+        });
+
         CardFacade::supertype('mega', 'water');
 
         Http::assertSent(function (Request $request) {
             return $request->url() === 'https://api.pokemontcg.io/v2/cards?q=name%3Amega%20-types%3Awater' && $request->method() === 'GET';
+        });
+
+        CardFacade::whereSupertype('ultra', 'fire');
+
+        Http::assertSent(function (Request $request) {
+            return $request->url() === 'https://api.pokemontcg.io/v2/cards?q=name%3Aultra%20-types%3Afire' && $request->method() === 'GET';
         });
 
         CardFacade::search('!name:charizard subtypes:mega -types:fire');
