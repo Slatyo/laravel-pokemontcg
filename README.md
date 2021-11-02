@@ -56,6 +56,12 @@ $cards = Pokemontcg::cards();
 Find a specific card by its id:
 ```php
 $cards->find('Test-111');
+
+// or
+
+use \Slatyo\LaravelPokemontcg\Facades\Card;
+
+Card::find('Test-111');
 ```
 
 ###### Search by hp ($from, $to)
@@ -64,12 +70,24 @@ Find Pokémon's based on HP:
 $from = "1";
 $to   = "100";
 $cards->hp($from, $to);
+
+// or
+
+use \Slatyo\LaravelPokemontcg\Facades\Card;
+
+Card::hp($from, $to);
 ```
 
 ###### Search by name
 Find Pokémon's based on their name:
 ```php
 $cards->name('Charizard');
+
+// or
+
+use \Slatyo\LaravelPokemontcg\Facades\Card;
+
+Card::name('Charizard');
 ```
 
 ###### Search Pokémon by Pokédex entries ($from, $to)
@@ -78,6 +96,12 @@ Find Pokémon's based on their name:
 $from = "1";
 $to   = "151";
 $cards->pokedex($from, $to);
+
+// or
+
+use \Slatyo\LaravelPokemontcg\Facades\Card;
+
+Card::pokedex($from, $to);
 ```
 
 ###### Search by supertypes
@@ -85,12 +109,25 @@ Find Pokémon's by `supertypes` and `types`:
 ```php
 $cards->supertype('mega');
 $cards->supertype('mega', 'water');
+
+// or
+
+use \Slatyo\LaravelPokemontcg\Facades\Card;
+
+Card::supertype('mega');
+Card::supertype('mega', 'water');
 ```
 
 ###### Search query
 Search Pokémon's based on a query string - for more details on how the query works check out: [Pokemontcg search cards](https://docs.pokemontcg.io/api-reference/cards/search-cards).
 ```php
 $cards->search('name:Char*zard supertype:mega -type:fire');
+
+// or
+
+use \Slatyo\LaravelPokemontcg\Facades\Card;
+
+Card::search('name:Char*zard supertype:mega -type:fire');
 ```
 
 #### Sets
@@ -102,13 +139,25 @@ $sets = Pokemontcg::sets();
 ###### Find by id
 Find a specific set by its id:
 ```php
-$sets->find('set-name')
+$sets->find('set-name');
+
+// or
+
+use \Slatyo\LaravelPokemontcg\Facades\Set;
+
+Set::find('set-name');
 ```
 
 ###### Search query
 Search Pokémon sets based on a query string - for more details on how the query works check out: [Pokemontcg search sets](https://docs.pokemontcg.io/api-reference/sets/search-cards).
 ```php
 $sets->search('legalities.standard:legal');
+
+// or
+
+use \Slatyo\LaravelPokemontcg\Facades\Set;
+
+Set::search('legalities.standard:legal');
 ```
 
 #### Supertypes
@@ -121,7 +170,13 @@ $supertypes = Pokemontcg::supertypes();
 ###### Get all
 Return all `supertypes`:
 ```php
-$supertypes->all()
+$supertypes->all();
+
+// or
+
+use \Slatyo\LaravelPokemontcg\Facades\Supertype;
+
+Supertype::all();
 ```
 
 #### Subtypes
@@ -133,7 +188,13 @@ $subtypes = Pokemontcg::subtypes();
 ###### Get all
 Return all `subtypes`:
 ```php
-$subtypes->all()
+$subtypes->all();
+
+// or
+
+use \Slatyo\LaravelPokemontcg\Facades\Subtype;
+
+Subtype::all();
 ```
 
 #### Types
@@ -145,7 +206,13 @@ $types = Pokemontcg::types();
 ###### Get all
 Return all `types`:
 ```php
-$types->all()
+$types->all();
+
+// or
+
+use \Slatyo\LaravelPokemontcg\Facades\Type;
+
+Type::all();
 ```
 
 #### Rarities
@@ -157,7 +224,13 @@ $rarities = Pokemontcg::rarities();
 ###### Get all
 Return all `rarities`:
 ```php
-$rarities->all()
+$rarities->all();
+
+// or
+
+use \Slatyo\LaravelPokemontcg\Facades\Rarity;
+
+Rarity::all();
 ```
 
 ### Testing

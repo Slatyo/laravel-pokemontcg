@@ -59,7 +59,13 @@
                 "Slatyo\\LaravelPokemontcg\\LaravelPokemontcgServiceProvider"
             ],
             "aliases": {
-                "LaravelPokemontcg": "Slatyo\\LaravelPokemontcg\\LaravelPokemontcgFacade"
+                "LaravelPokemontcg": "Slatyo\\LaravelPokemontcg\\Facades\\Pokemontcg",
+                "PokemontcgCard": "Slatyo\\LaravelPokemontcg\\Facades\\Card",
+                "PokemontcgRarity": "Slatyo\\LaravelPokemontcg\\Facades\\Rarity",
+                "PokemontcgSet": "Slatyo\\LaravelPokemontcg\\Facades\\Set",
+                "PokemontcgSubtype": "Slatyo\\LaravelPokemontcg\\Facades\\Subtype",
+                "PokemontcgSupertype": "Slatyo\\LaravelPokemontcg\\Facades\\Supertype",
+                "PokemontcgType": "Slatyo\\LaravelPokemontcg\\Facades\\Type"
             }
         }
     }
