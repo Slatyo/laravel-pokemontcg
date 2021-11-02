@@ -307,7 +307,7 @@ class PokemontcgTest extends TestCase
                 && $request->method() === 'GET';
         });
 
-        CardFacade::whereName('charizard', true);
+        CardFacade::whereName('pikatchu', true);
 
         Http::assertSent(function (Request $request) {
             return $request->url() === 'https://api.pokemontcg.io/v2/cards?q=%21name%3Apikatchu'
