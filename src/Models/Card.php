@@ -76,6 +76,17 @@ class Card extends Model
     }
 
     /**
+     * @param  string  $pokemon
+     * @param  bool    $strict
+     *
+     * @return mixed
+     */
+    public function whereName(string $pokemon, bool $strict = false): mixed
+    {
+        return $this->name($pokemon, $strict);
+    }
+
+    /**
      * @param  string  $supertype
      * @param  string  $type
      *
@@ -83,7 +94,7 @@ class Card extends Model
      */
     public function supertype(string $supertype, string $type = ''): mixed
     {
-        if (strlen($type)) {
+        if ($type !== '') {
             $type = ' -types:'.$type;
         }
 
@@ -93,6 +104,17 @@ class Card extends Model
             ]),
             $this->getEndpoint().$supertype.$type
         );
+    }
+
+    /**
+     * @param  string  $supertype
+     * @param  string  $type
+     *
+     * @return mixed
+     */
+    public function whereSupertype(string $supertype, string $type = ''): mixed
+    {
+        return $this->supertype($supertype, $type);
     }
 
     /**
@@ -117,6 +139,17 @@ class Card extends Model
      *
      * @return mixed
      */
+    public function wherePokedex(string $from, string $to): mixed
+    {
+        return $this->pokedex($from, $to);
+    }
+
+    /**
+     * @param  string  $from
+     * @param  string  $to
+     *
+     * @return mixed
+     */
     public function hp(string $from, string $to): mixed
     {
         return $this->resolveResponse(
@@ -125,5 +158,16 @@ class Card extends Model
             ]),
             $this->getEndpoint().'hp'.$from.$to
         );
+    }
+
+    /**
+     * @param  string  $from
+     * @param  string  $to
+     *
+     * @return mixed
+     */
+    public function whereHp(string $from, string $to): mixed
+    {
+        return $this->hp($from, $to);
     }
 }

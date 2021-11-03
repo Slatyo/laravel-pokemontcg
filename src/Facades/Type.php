@@ -1,10 +1,13 @@
 <?php
 
-namespace Slatyo\LaravelPokemontcg;
+namespace Slatyo\LaravelPokemontcg\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class LaravelPokemontcgFacade extends Facade
+/**
+ * @method static mixed all()
+ */
+class Type extends Facade
 {
     /**
      * Get the registered name of the component.
@@ -13,6 +16,6 @@ class LaravelPokemontcgFacade extends Facade
      */
     protected static function getFacadeAccessor(): string
     {
-        return 'pokemontcg';
+        return 'pokemontcg-type';
     }
 }

@@ -3,6 +3,12 @@
 namespace Slatyo\LaravelPokemontcg;
 
 use Illuminate\Support\ServiceProvider;
+use Slatyo\LaravelPokemontcg\Models\Card;
+use Slatyo\LaravelPokemontcg\Models\Rarity;
+use Slatyo\LaravelPokemontcg\Models\Set;
+use Slatyo\LaravelPokemontcg\Models\Subtype;
+use Slatyo\LaravelPokemontcg\Models\Supertype;
+use Slatyo\LaravelPokemontcg\Models\Type;
 
 class LaravelPokemontcgServiceProvider extends ServiceProvider
 {
@@ -47,7 +53,7 @@ class LaravelPokemontcgServiceProvider extends ServiceProvider
     /**
      * Register the application services.
      */
-    public function register()
+    public function register(): void
     {
         // Automatically apply the package configuration
         $this->mergeConfigFrom(__DIR__.'/../config/pokemontcg.php', 'pokemontcg');
@@ -55,6 +61,36 @@ class LaravelPokemontcgServiceProvider extends ServiceProvider
         // Register the main class to use with the facade
         $this->app->singleton('pokemontcg', function () {
             return new Pokemontcg;
+        });
+
+        // Register the card class to use with the facade
+        $this->app->singleton('pokemontcg-card', function () {
+            return new Card;
+        });
+
+        // Register the rarity class to use with the facade
+        $this->app->singleton('pokemontcg-rarity', function () {
+            return new Rarity;
+        });
+
+        // Register the set class to use with the facade
+        $this->app->singleton('pokemontcg-set', function () {
+            return new Set;
+        });
+
+        // Register the subtype class to use with the facade
+        $this->app->singleton('pokemontcg-subtype', function () {
+            return new Subtype;
+        });
+
+        // Register the supertype class to use with the facade
+        $this->app->singleton('pokemontcg-supertype', function () {
+            return new Supertype;
+        });
+
+        // Register the type class to use with the facade
+        $this->app->singleton('pokemontcg-type', function () {
+            return new Type;
         });
     }
 }
