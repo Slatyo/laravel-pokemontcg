@@ -56,6 +56,8 @@ class ModelTest extends TestCase
      */
     public function testResolvingResponse(): void
     {
+        $this->expectNotToPerformAssertions();
+
         $cards = Pokemontcg::cards();
         $responseMock = Mockery::mock(Response::class);
 
