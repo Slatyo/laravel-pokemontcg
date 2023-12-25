@@ -16,12 +16,9 @@ class Card extends Model
      */
     public function find(string $pokemonTcgId): mixed
     {
-        return $this->resolveResponse(
-            $this->client->get($this->getEndpoint(), [
-                'id' => $pokemonTcgId,
-            ]),
-            $this->getEndpoint().$pokemonTcgId
-        );
+        $endpoint = $this->getEndpoint() . '/' . $pokemonTcgId;
+    
+        return $this->resolveResponse($this->client->get($endpoint), $endpoint);
     }
 
     /**
