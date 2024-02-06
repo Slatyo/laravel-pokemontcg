@@ -171,7 +171,7 @@ class PokemontcgTest extends TestCase
         $cards->find('test-11');
 
         Http::assertSent(function (Request $request) {
-            return $request->url() === 'https://api.pokemontcg.io/v2/cards?id=test-11'
+            return $request->url() === 'https://api.pokemontcg.io/v2/cards/test-11'
                 && $request->method() === 'GET';
         });
 
@@ -282,7 +282,7 @@ class PokemontcgTest extends TestCase
         CardFacade::find('test-11');
 
         Http::assertSent(function (Request $request) {
-            return $request->url() === 'https://api.pokemontcg.io/v2/cards?id=test-11'
+            return $request->url() === 'https://api.pokemontcg.io/v2/cards/test-11'
                 && $request->method() === 'GET';
         });
 
